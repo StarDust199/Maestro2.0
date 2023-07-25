@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Maestro20" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+    <style name="Base.AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textSize">20sp</item>
+
+    </style>
+
+    <style name="BlueTheme" parent="Base.AppTheme">
+        <item name="colorPrimary">@color/violet</item>
+        <item name="colorPrimaryVariant">@color/light_violet</item>
+        <item name="colorAccent">@color/pink</item>
+        <item name="colorContainer">@color/latte</item>
+        <item name="colorButtonNormal">@color/blueberry</item>
+    </style>
+    <style name="Theme.Maestro20" parent="Base.Theme.Maestro20" />
+</resources>
