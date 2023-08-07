@@ -7,8 +7,8 @@
     tools:context=".MainActivity">
 
     <RelativeLayout
-        android:layout_width="412dp"
-        android:layout_height="740dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -34,22 +34,22 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="138dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="2dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginEnd="0dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="0dp"
                 app:srcCompat="@drawable/pieciolinia_wieksza" />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/relativeLayout4"
-            android:layout_width="412dp"
-            android:layout_height="425dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
             android:layout_below="@+id/relativeLayout2"
             android:layout_alignParentStart="true"
@@ -64,7 +64,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="20dp"
@@ -83,8 +83,8 @@
 
                     <EditText
                         android:id="@+id/login"
-                        android:layout_width="237dp"
-                        android:layout_height="61dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_below="@+id/textView2"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentEnd="true"
@@ -93,8 +93,10 @@
                         android:layout_marginEnd="30dp"
                         android:autofillHints=""
                         android:background="@drawable/edit_text_background"
+                        android:drawableLeft="@drawable/icons8_user_24"
+                        android:drawablePadding="10dp"
                         android:hint="@string/login"
-                        android:inputType="textPassword"
+                        android:inputType="textPersonName"
                         android:padding="12dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -102,8 +104,8 @@
 
                     <EditText
                         android:id="@+id/password"
-                        android:layout_width="237dp"
-                        android:layout_height="61dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_below="@+id/login"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentEnd="true"
@@ -112,6 +114,8 @@
                         android:layout_marginEnd="30dp"
                         android:autofillHints=""
                         android:background="@drawable/edit_text_background"
+                        android:drawableLeft="@drawable/icons8_password_24"
+                        android:drawablePadding="10dp"
                         android:hint="@string/password"
                         android:inputType="textPassword"
                         android:padding="12dp"
@@ -120,9 +124,9 @@
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <EditText
-                        android:id="@+id/password2"
-                        android:layout_width="237dp"
-                        android:layout_height="61dp"
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_below="@+id/password"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentEnd="true"
@@ -131,52 +135,73 @@
                         android:layout_marginEnd="30dp"
                         android:autofillHints=""
                         android:background="@drawable/edit_text_background"
+                        android:drawableLeft="@drawable/icons8_email_24"
+                        android:drawablePadding="10dp"
                         android:hint="@string/email"
-                        android:inputType="textPassword"
+                        android:inputType="textEmailAddress"
                         android:padding="12dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         tools:ignore="SpeakableTextPresentCheck" />
 
-                    <Button
-                        android:id="@+id/button"
-                        android:layout_width="0dp"
+                    <Spinner
+                        android:id="@+id/role_spinner"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/password2"
+                        android:layout_below="@+id/email"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentEnd="true"
-                        android:layout_marginStart="76dp"
+                        android:layout_marginStart="30dp"
                         android:layout_marginTop="15dp"
-                        android:layout_marginEnd="80dp"
+                        android:layout_marginEnd="30dp"
+                        android:minHeight="48dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/email" />
+
+                    <Button
+                        android:id="@+id/button_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/role_spinner"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="30dp"
                         android:background="@drawable/button_background"
-                        android:text="Zaloguj"
-                        android:textColor="@color/white" />
+                        android:text="Zarejestruj"
+                        android:textColor="@color/white"
+                        app:layout_constraintTop_toBottomOf="@id/role_spinner" />
 
                     <TextView
                         android:id="@+id/textView"
-                        android:layout_width="357dp"
-                        android:layout_height="47dp"
-                        android:layout_below="@+id/button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/button_register"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginStart="7dp"
-                        android:layout_marginTop="37dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="0dp"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="3dp"
+                        android:layout_marginBottom="24dp"
                         android:text="Masz już konto? Zaloguj się."
                         android:textAlignment="center"
                         android:textColor="@color/design_default_color_on_secondary" />
 
                     <TextView
                         android:id="@+id/textView2"
-                        android:layout_width="184dp"
-                        android:layout_height="64dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
-                        android:layout_marginStart="85dp"
+                        android:layout_marginStart="30dp"
                         android:layout_marginTop="20dp"
-                        android:layout_marginEnd="85dp"
+                        android:layout_marginEnd="30dp"
                         android:text="Rejestracja"
                         android:textAlignment="center"
                         android:textColor="@color/blueberry"

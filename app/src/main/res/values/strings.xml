@@ -3,4 +3,10 @@
     <string name="password">hasło</string>
     <string name="login">Login</string>
     <string name="email">Email</string>
+
+
+    <string-array name="user_roles">
+        <item>Orkiestrant</item>
+        <item>Kapelmistrz</item>
+    </string-array>
 </resources>
